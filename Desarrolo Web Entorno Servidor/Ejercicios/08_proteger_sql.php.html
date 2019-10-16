@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    <?php
+    ini_set('display_errors','On');
+    error_reporting(E_ALL);
+    ?>
+    <p>A veces, se usa el input de usuario para construir una query para una BBDD</p>
+    <p>Es muy importante <q>sanear</q> (<q>sanitize</q>) el input</p>
+    <p>Veamos qué ocurre si no lo hacemos</p>
+    <p>Suponemos la siguiente query:</p>
+    <p> &quot;SELECT * FROM `deportes` WHERE `codigo` = '[input de usuario]'&quot;</p>
+    <p>El input nos podría hacer listar todo</p>
+    
+    <?php
+    $campo="ow";
+    $query="SELECT * FROM `deportes` WHERE `codigo` = '$campo'";
+    print "<p>Uso normal</p>\n";
+    print "<p>campo:[$campo]</p>\n";
+    print "<p>Query: [$query]</p>";
+    ?>
+    </body>
+</html>

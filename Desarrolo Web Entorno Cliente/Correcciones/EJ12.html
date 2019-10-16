@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Ej. 12</title>
+<script>
+//8.- >10,>15,>50
+
+const num=8;
+var elementos=[];
+var i,total=0,may10=0;may15=0;may50=0;
+
+for(i=0;i<num;i++){
+     elementos[i]= parseInt(prompt("Introduce el elemento:  "+ (i+1)));
+	 if (elementos[i]>10) may10++;
+     if (elementos[i]>15) may15++;
+	 if  (elementos[i]>50) may50++;
+	 total=total+elementos[i];
+}
+
+
+//Salida de Resultados
+
+
+document.write('<p> Valor acumulado de todos los elementos: '+ total +'</p>');
+document.write('<p> Mayores que 10: '+ may10 +'</p>');
+document.write('<p> Mayores que 15: '+ may15 +'</p>');
+document.write('<p> Mayores que 50: '+ may50 +'</p>');
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

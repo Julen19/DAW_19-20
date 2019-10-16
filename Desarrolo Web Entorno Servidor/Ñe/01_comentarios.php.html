@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/strict.dtd">
+<html>
+<head>
+<META http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Exported from Notepad++</title>
+<style type="text/css">
+span {
+	font-family: 'Courier New';
+	font-size: 10pt;
+	color: #000000;
+}
+.sc0 {
+	font-weight: bold;
+}
+.sc1 {
+	color: #0000FF;
+}
+.sc3 {
+	color: #FF0000;
+}
+.sc6 {
+	font-weight: bold;
+	color: #8000FF;
+}
+.sc8 {
+}
+.sc9 {
+	color: #008000;
+}
+.sc18 {
+	color: #FF0000;
+	background: #FDF8E3;
+}
+.sc21 {
+	background: #A6CAF0;
+}
+.sc26 {
+}
+.sc118 {
+	background: #FEFCF5;
+}
+.sc119 {
+	color: #808080;
+	background: #FEFCF5;
+}
+.sc120 {
+	color: #808080;
+	background: #FEFCF5;
+}
+.sc121 {
+	font-weight: bold;
+	color: #0000FF;
+	background: #FEFCF5;
+}
+.sc123 {
+	color: #000080;
+	background: #FEFCF5;
+}
+.sc124 {
+	color: #008000;
+	background: #FEFCF5;
+}
+.sc126 {
+	font-weight: bold;
+	color: #808080;
+	background: #FEFCF5;
+}
+.sc127 {
+	color: #8000FF;
+	background: #FEFCF5;
+}
+</style>
+</head>
+<body>
+<div style="float: left; white-space: pre; line-height: 1; background: #FFFFFF; "><span class="sc21">&lt;!</span><span class="sc26">DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd"</span><span class="sc21">&gt;</span><span class="sc0">
+</span><span class="sc1">&lt;html&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;head&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;title&gt;&lt;/title&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;meta</span><span class="sc8"> </span><span class="sc3">http-equiv</span><span class="sc8">=</span><span class="sc6">"Content-Type"</span><span class="sc8"> </span><span class="sc3">content</span><span class="sc8">=</span><span class="sc6">"text/html; charset=utf-8"</span><span class="sc1">&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;meta</span><span class="sc8"> </span><span class="sc3">name</span><span class="sc8">=</span><span class="sc6">"viewport"</span><span class="sc8"> </span><span class="sc3">content</span><span class="sc8">=</span><span class="sc6">"width=device-width, initial-scale=1.0"</span><span class="sc1">&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;/head&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;body&gt;</span><span class="sc0">
+    </span><span class="sc18">&lt;?php</span><span class="sc118">
+    </span><span class="sc121">ini_set</span><span class="sc127">(</span><span class="sc120">'display_errors'</span><span class="sc127">,</span><span class="sc120">'On'</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc121">error_reporting</span><span class="sc127">(</span><span class="sc121">E_ALL</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc18">?&gt;</span><span class="sc0">
+    </span><span class="sc18">&lt;?php</span><span class="sc118">
+    </span><span class="sc124">/*
+    En PHP hay principalmente dos tipos de cadenas: 
+        -Entre comillas simples
+        -Entre comillas dobles
+    */</span><span class="sc118">
+    </span><span class="sc121">print</span><span class="sc118"> </span><span class="sc119">"&lt;p&gt;El alumno se llama Pepito&lt;/p&gt;"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc121">print</span><span class="sc118"> </span><span class="sc120">'&lt;p&gt;El alumno se llama Luisito&lt;/p&gt;'</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc124">/*
+    Si hay elemento que puedan transformarse, sólo lo hacen el las cadenas con comillas dobles
+    */</span><span class="sc118">
+    </span><span class="sc121">print</span><span class="sc118"> </span><span class="sc119">"&lt;p&gt;Salto de línea \n y tabulador \t con comilla doble &lt;/p&gt;"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc121">print</span><span class="sc118"> </span><span class="sc120">'&lt;p&gt;Salto de línea \n y tabulador \t con comilla simple &lt;/p&gt;'</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc124">/* 
+    Todos los caracteres entre comillas simples son literales excepto la comilla simple.
+    Si quiero escribir una comilla simple, la escapo
+    */</span><span class="sc118">
+    </span><span class="sc121">print</span><span class="sc118"> </span><span class="sc120">'&lt;p&gt;El caracter \' es una comilla simple&lt;/p&gt;'</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc121">print</span><span class="sc118"> </span><span class="sc119">"&lt;p&gt;El caracter ' es una comilla simple&lt;/p&gt;"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc124">/*
+    Entre comillas dobles, se expanden las variables y la secuencias de escape
+    */</span><span class="sc118">
+    </span><span class="sc121">print</span><span class="sc118"> </span><span class="sc119">"&lt;p&gt;Salto de linea \n conseguido con \\n &lt;p&gt;"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc124">/*
+    En general escribiremos con comillas dobles y terminaremos con un \n para que salte de línea
+    */</span><span class="sc118">
+    
+    </span><span class="sc124">/*
+    Cualquier símbolo que empiece por $ es una variable.
+    Las variables y las secuencias de escape se expanden en las comillas dobles.
+    Si no existe no da error
+    */</span><span class="sc118">
+    </span><span class="sc123">$alumno</span><span class="sc127">=</span><span class="sc120">'Pepito'</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc121">print</span><span class="sc118"> </span><span class="sc119">"\n&lt;p&gt;Saludos </span><span class="sc126">$alumno</span><span class="sc119">&lt;/p&gt;\n"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc121">print</span><span class="sc118"> </span><span class="sc120">'\n&lt;p&gt;Saludos $alumno&lt;/p&gt;\n'</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc121">print</span><span class="sc118"> </span><span class="sc119">"&lt;p&gt;Bienvenido de nuevo </span><span class="sc126">$alumno</span><span class="sc119"> </span><span class="sc126">$apellido</span><span class="sc119">&lt;/p&gt;\n"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc18">?&gt;</span><span class="sc0">
+    </span><span class="sc9">&lt;!-- Ejemplo de formulario --&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;form</span><span class="sc8"> </span><span class="sc3">action</span><span class="sc8">=</span><span class="sc6">"ejemplo.com"</span><span class="sc8"> </span><span class="sc3">method</span><span class="sc8">=</span><span class="sc6">"GET"</span><span class="sc1">&gt;</span><span class="sc0">
+    Nombre:</span><span class="sc1">&lt;input</span><span class="sc8"> </span><span class="sc3">type</span><span class="sc8">=</span><span class="sc6">"text"</span><span class="sc8"> </span><span class="sc3">name</span><span class="sc8">=</span><span class="sc6">"nombre"</span><span class="sc8"> </span><span class="sc3">value</span><span class="sc8">=</span><span class="sc6">"Pepito"</span><span class="sc1">&gt;&lt;br&gt;</span><span class="sc0">
+    </span><span class="sc9">&lt;!--Tomando Pepito de $alumno --&gt;</span><span class="sc0">
+    Apellido:</span><span class="sc1">&lt;input</span><span class="sc8"> </span><span class="sc3">type</span><span class="sc8">=</span><span class="sc6">"text"</span><span class="sc8"> </span><span class="sc3">name</span><span class="sc8">=</span><span class="sc6">"apellido"</span><span class="sc1">&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;/form&gt;</span><span class="sc0">
+    </span><span class="sc18">&lt;?php</span><span class="sc118">
+    </span><span class="sc124">/*
+    Supongamos que queremos escribir el formulario desde PHP con comilla doble.
+    -Entidades para los límites de etiquetas &lt; y &gt;
+    -Escapar las comillas dobles
+    
+    PODEMOS USAR UN HEREDOC
+    */</span><span class="sc118">
+    </span><span class="sc121">print</span><span class="sc118"> </span><span class="sc119">&lt;&lt;&lt;FORMULARIO
+    
+    &lt;form action="ejemplo.com" method="GET"&gt;
+    Nombre:&lt;input type="text" name="nombre" value="</span><span class="sc126">$alumno</span><span class="sc119">"&gt;&lt;br&gt;
+    &lt;!--Tomando Pepito de </span><span class="sc126">$alumno</span><span class="sc119"> --&gt;
+    Apellido:&lt;input type="text" name="apellido"&gt;
+    &lt;/form&gt;
+    
+FORMULARIO</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc18">?&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;/body&gt;</span><span class="sc0">
+</span><span class="sc1">&lt;/html&gt;</span></div></body>
+</html>

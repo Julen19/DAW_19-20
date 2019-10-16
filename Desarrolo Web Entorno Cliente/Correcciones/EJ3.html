@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Ej. 3</title>
+<script>
+//3.Confeccionar un programa que permita cargar un número entero 
+// positivo de hasta tres cifras y muestre un mensaje indicando si tiene 1, 2, ó 3 cifras. 
+// Mostrar un mensaje de error si el número de cifras no es 1, 2 ó 3. 
+
+var num = parseInt(prompt("Introduce un numero (0--999)"));
+
+if (num>999)
+          document.write('<p><h2>El número tiene mas de tres cifras</h2></p>');
+else if (num >99)
+          document.write('<p><h2>El número tiene tres cifras</h2></p>');
+     else if (num > 9)
+          document.write('<p><h2>El número tiene dos cifras</h2></p>');
+          else 
+            document.write('<p><h2>El número tiene una cifra</h2></p>'); 		  
+
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+    <title>X_Ejercicio</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Ejercicio3.js"></script>
+
+</head>
+
+<body>
+    <p>
+        <script>
+            var numero = parseInt(prompt("mete numero"));
+            crear_persona(numero);
+            var jeje = confirm("Quieres buscar un jugador?");
+            if (jeje) {
+                var dni = prompt("Introduce el dni que deseas buscar");
+
+                mostrar_personas(dni);
+            } else {
+                prompt("no se ha encontrado el nombre que buscas");
+
+            }
+        </script>
+
+    </p>
+</body>
+
+</html>

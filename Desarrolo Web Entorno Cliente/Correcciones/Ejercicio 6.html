@@ -1,0 +1,30 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Ejercicio 6</title>
+<script>
+
+//Haciendo uso de la función confirm de JavaScript y de un bucle do … while 
+//Muestra los números pares de 25 en 25 hasta que el usuario decida terminar.
+
+var i=2;
+var resp=1;
+
+do{
+         document.write(i+ '  ');
+  if(i%10==0)
+         document.write('<br>');
+  if(i%50==0)
+         resp=confirm('Desea continuar');
+  	 
+  i=i+2;	 
+}while (resp);
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

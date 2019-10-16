@@ -1,0 +1,42 @@
+header {
+    height: 80px;
+    width: 930px;
+    margin-left: 15px;
+    margin-right: 15px;
+    background: #dddddd;
+}
+
+ul {
+    list-style-type: none;
+    margin-left: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+    float: left;
+}
+
+nav.izquierda {
+    float: left;
+}
+
+nav.derecha {
+    float: right;
+    display: flex;
+    flex-direction: row;
+}
+
+a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: black
+}
+
+.logo {
+    margin: 10px;
+    margin-left: 50px;
+    float: left;
+}

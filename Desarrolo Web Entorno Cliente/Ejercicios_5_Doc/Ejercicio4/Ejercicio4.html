@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+    <title>X_Ejercicio</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Ejercicio4.js"></script>
+
+</head>
+
+<body>
+    <script>
+        var num = prompt("cuantos piesos deseas introducir?");
+        crear_persona(num);
+        var ven = confirm("desea visualizar los pisos?")
+        if (ven) {
+            var numhab = prompt("Introduzca el numero de habitacion: ");
+            informacion(numhab);
+        } else {
+            alert("Oh lo chiento 1");
+
+        }
+        var ven2 = confirm("desea calcular el iva?");
+        if (ven2) {
+            var numhab = prompt("Introduzca el numero de habitacion: ");
+
+            calculariva(numhab);
+
+        } else {
+            alert("Oh lo chiento 2");
+
+        }
+    </script>
+    <p>
+    </p>
+</body>
+</html

@@ -1,0 +1,139 @@
+body{
+	text-align:center;
+}
+h2{
+display:block;
+clear:left;
+}
+
+.sombra{
+    color:blue;
+	text-shadow: 5px 5px 5px black;
+}
+
+.sombrasup{
+	text-shadow: -8px -8px 8px #000;
+}
+
+.tressombras{
+	text-shadow: 3px 3px 5px #f00, 6px 6px 5px #0f0, 9px 9px 5px #00f;
+}
+
+#fondos{
+background: url(../imagenes/ciudad.png) 100% 100% no-repeat, url(../imagenes/triangulos.png) repeat, url(../imagenes/manchas.png) repeat;
+width:100%;
+height: 300px;
+}
+
+
+.dcha{
+	transform: rotate(45deg);
+}
+
+.izda{
+	transform: rotate(-45deg);
+
+} 
+
+.vuelta{
+   transform: scale(1,-1)}
+   
+.giro {
+	transform: rotate(180deg);
+
+}
+.translado{
+	transform: translatex(300px);
+}
+
+.inclinada{
+	transform: skew(25deg, 25deg);
+}
+
+.rotar{
+	transform-origin: 0% 100%;
+	transform: rotate(10deg);
+}
+
+.trescol{
+	width: 100%;
+	color:#ffffff;
+	background: blue ;
+	column-count: 3;
+	-moz-column-count:3;
+	-webkit-column-count:3;
+	column-gap: 50px;
+	-moz-column-gap: 50px;
+	-webkit-column-gap: 50px;
+}
+
+.cuatrocol{
+	width: 100%;
+	background: pink;
+	color:blue;
+	column-count: 4;
+	-moz-column-count:4;
+	-webkit-column-count:4;
+	column-gap: 50px;
+	-moz-column-gap: 50px;
+	-webkit-column-gap: 50px;
+	column-rule: 2px solid #ffffff;
+	-moz-column-rule: 1px solid #ffffff;
+	-webkit-column-rule: 1px solid #ffffff;
+}
+
+.normal{
+ 
+	width: 300px;
+	height:300px;
+	background: url(../imagenes/Bart.jpg) no-repeat;
+	float:left;
+	border: 1px solid #000;
+	margin:10px;
+
+}
+
+.contain{
+    width: 300px;
+	height:300px;
+    background: url(../imagenes/Bart.jpg) no-repeat;
+	background-size: contain;
+	float:left;
+	border: 1px solid #000;
+	margin:10px;
+}
+
+.cover{
+    width: 300px;
+	height:300px;
+    background: url(../imagenes/Bart.jpg) no-repeat;
+	background-size: cover;
+	float:left;
+	border: 1px solid #000;
+	margin:10px;
+}
+
+.opacidad{
+	opacity: .5;
+}
+
+.n1,.n2, .n3, .n4{
+	color: #fff;
+	background: blue;
+	font-size:40px;
+}
+.n1{
+	color:rgba(255, 255, 255, 0);
+}
+.n2{
+	color:rgba(255, 255, 255, .25);
+}
+.n3{
+	color:rgba(255, 255, 255, .5);
+}
+.n4{
+	color:rgba(255, 255, 255, .75);
+}
+
+
+

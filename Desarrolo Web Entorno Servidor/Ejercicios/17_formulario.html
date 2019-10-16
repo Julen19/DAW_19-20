@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!--
+Escribe un formulario con todos los tipos de campo que se te ocurran.
+Incluye por ejemplo un cumplea�os y escr�belo desde PHP
+-input de tipo texto o los nuevos campos: n�mero, color
+-Drop Down list enviando el dato que se ve 
+-Lo mismo enviando una "clave primaria" (se ve Bizkaia pero se env�a 48)
+-Lo mismo permitiendo seleccionar varios (multiple)
+-Lo mismo usado grupos optgroup
+-Botones de radio
+-Checkboxes "independientes", alguno de ellos marcado por defecto
+-Checkboxes "unidos" �Cu�les de las siguientes pel�culas has visto?
+-->
+<html>
+
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <form action="17_formulario.php" method="POST">
+        <label for="Nombre">Nombre: <input type="text" name="nombre" id="nombre">
+            <br><br>
+
+        </label>
+        <label for="">Genero:</label>
+        <label for="Sexo">
+            <input type="radio" name="genero" value="H">Hombre
+            <input type="radio" name="genero" value="H">Mujer
+            <input type="radio" name="genero" value="H">Otro
+
+        </label>
+        <br><br>
+        <label for=""> Color: </label>
+        <select name="color" id="color">
+            <option value="Rojo">Rojo</option>
+            <option value="Azul">Azul</option>
+            <option value="Blanco">Blanco</option>
+            <option value="Negro">Negro</option>
+        </select>
+        <br><br>
+        <label for=""> Provincia: </label>
+
+        <select name="Provincia" id="Provincia">
+            <option value="48">Bizkaia</option>
+            <option value="49">Araba</option>
+            <option value="50">Navarra</option>
+            <option value="51">Gipuzkoa</option>
+        </select>
+        <br><br>
+        <label for=""> Provincia: </label>
+
+        <select name="Provincia" id="Provincia" multiple>
+            <option value="48">Bizkaia</option>
+            <option value="49">Araba</option>
+            <option value="50">Navarra</option>
+            <option value="51">Gipuzkoa</option>
+        </select>
+        <br><br>
+
+        <label for=""> Marcas: </label>
+
+        <select name="Marcas" id="Marcas">
+            <optgroup label="EEUU">
+                <option value="Nike">Nike</option>
+                <option value="UA">UA</option>
+
+            </optgroup>
+            <optgroup label="Alemania">
+                <option value="Adidas">Adidas</option>
+                <option value="Puma">Puma</option>
+
+            </optgroup>
+
+        </select>
+        <br><br>
+        <label for="Vehiculos">
+            <input type="checkbox" name="Audi" value="Audi" checked>Audi
+            <input type="checkbox" name="BMW" value="BMW">BMW
+            <input type="checkbox" name="Mercedes" value="Mercedes">Mercedes
+        </label>
+        <br><br>
+        <label for="">Botas: </label>
+        <label for="botas">
+            <input type="radio" name="botas" value="Mercurial">Mercurial
+            <input type="radio" name="botas" value="Magista">Magista
+            <input type="radio" name="botas" value="Tiempo">Tiempo
+        </label>
+
+        <br><br>
+        <input type="submit" value="Enviar Consulta">
+    </form>
+</body>
+
+</html>

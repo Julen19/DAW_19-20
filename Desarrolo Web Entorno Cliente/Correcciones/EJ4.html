@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Ej. 4</title>
+<script>
+//4. Sueldo Operario
+
+var sueldo = parseInt(prompt("Introduce tu sueldo"));
+var ant = parseInt(prompt("Introduce tu antiguedad"));
+
+if (sueldo<500)
+          if (ant >= 10)
+          document.write('<p><h2>Aumentamos un 20% el sueldo. Sueldo: '+ sueldo*1.2 + '</h2></p>');
+          else
+          document.write('<p><h2>Aumentamos un 5 % el sueldo. Sueldo: '+ sueldo*1.05 + '</h2></p>');
+else 
+          document.write('<p><h2>No hay aumentos. Sueldo: '+ sueldo+' </h2></p>');		  
+
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+#paginacion {
+    display: block;
+    margin: auto;
+    width: 50%;
+    height: 80px;
+    background: #dddddd;
+}
+
+.izquierda {
+    float: left;
+    margin-top: 25px;
+}
+
+.derecha {
+    float: right;
+    margin-top: 25px;
+}

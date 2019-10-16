@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Ej. 10</title>
+<script>
+//10. -Edades
+
+const alm=5;
+const alt=6;
+const aln=7;
+
+var summ=0,alumnosm=[];
+var sumt=0,alumnost=[];
+var sumn=0,alumnosn=[];
+var pm,pt,pn;
+var i;
+
+//Petición de edades
+
+for (i=0;i<alm;i++){
+ alumnosm[i]=parseInt(prompt("Alumno "+(i+1)+" del turno de mañana \n Introduce edad :"));
+ summ=summ+alumnosm[i];
+};
+
+for (i=0;i<alt;i++){
+ alumnost[i]=parseInt(prompt("Alumno "+(i+1)+" del turno de tarde \n Introduce edad :"));
+ sumt=sumt+alumnost[i];
+};
+for (i=0;i<aln;i++){
+ alumnosn[i]=parseInt(prompt("Alumno "+(i+1)+" del turno de noche \n Introduce edad :"));
+ sumn=sumn+alumnosn[i];
+};
+
+//Salida de Resultados
+pm=(summ/alm);
+pt=(sumt/alt);
+pn=(sumn/aln);
+document.write('<p><h2>PROMEDIOS</h2></p>');
+document.write('<p>PROMEDIO MAÑANA: '+pm+'</p>');
+document.write('<p>PROMEDIO TARDE: '+pt+'</p>');
+document.write('<p>PROMEDIO NOCHE: '+pn+'</p>');
+
+if ((pm>pt)&& (pm>pn))
+                document.write('<p>MAYOR PROMEDIO LOS DE LA MAÑANA</p>');
+else
+    if (pt>pn)
+	      document.write('<p>MAYOR PROMEDIO LOS DE LA TARDE</p>');
+	else 	  
+        document.write('<p>MAYOR PROMEDIO LOS DE LA NOCHE</p>');
+		
+		
+		
+</script>
+</head>
+<body>
+
+</body>
+</html>

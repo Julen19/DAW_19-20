@@ -1,0 +1,44 @@
+body {
+	text-align: center;
+	background:#a3323a;
+}
+
+#principal {
+	display: block;
+	width: 500px;
+	margin: 50px auto;
+	padding: 15px;
+	text-align: center;
+	border: 1px solid #999999;
+	border-radius: 20px;
+	box-shadow: 0px 0px 10px #fff;
+	background: #a3323a; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #a3323a 0%, #ffffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#a3323a), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #a3323a 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  #a3323a 0%,#ffffff 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  #a3323a 0%,#ffffff 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  #a3323a 0%,#ffffff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a3323a', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+#titulo {
+	font: bold 36px verdana, sans-serif;
+}
+
+section{
+	width: 500px;
+	margin: 20px auto;
+	padding: 20px;
+	border-radius: 20px;
+	box-shadow: 0px 0px 10px #fff;
+}
+
+article{
+	border-radius: 20px;
+	box-shadow: 0px 0px 10px #000;
+	background: #fff;
+	margin-bottom: 20px;
+	text-align: left;
+	padding: 20px;
+}

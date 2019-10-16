@@ -1,0 +1,487 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/strict.dtd">
+<html>
+<head>
+<META http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Exported from Notepad++</title>
+<style type="text/css">
+span {
+	font-family: 'Courier New';
+	font-size: 10pt;
+	color: #000000;
+}
+.sc0 {
+	font-weight: bold;
+}
+.sc1 {
+	color: #0000FF;
+}
+.sc3 {
+	color: #FF0000;
+}
+.sc6 {
+	font-weight: bold;
+	color: #8000FF;
+}
+.sc8 {
+}
+.sc9 {
+	color: #008000;
+}
+.sc18 {
+	color: #FF0000;
+	background: #FDF8E3;
+}
+.sc21 {
+	background: #A6CAF0;
+}
+.sc26 {
+}
+.sc118 {
+	background: #FEFCF5;
+}
+.sc119 {
+	color: #808080;
+	background: #FEFCF5;
+}
+.sc120 {
+	color: #808080;
+	background: #FEFCF5;
+}
+.sc121 {
+	font-weight: bold;
+	color: #0000FF;
+	background: #FEFCF5;
+}
+.sc123 {
+	color: #000080;
+	background: #FEFCF5;
+}
+.sc124 {
+	color: #008000;
+	background: #FEFCF5;
+}
+.sc126 {
+	font-weight: bold;
+	color: #808080;
+	background: #FEFCF5;
+}
+.sc127 {
+	color: #8000FF;
+	background: #FEFCF5;
+}
+</style>
+</head>
+<body>
+<div style="float: left; white-space: pre; line-height: 1; background: #FFFFFF; "><span class="sc21">&lt;!</span><span class="sc26">DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd"</span><span class="sc21">&gt;</span><span class="sc0">
+</span><span class="sc9">&lt;!--
+Visita la sección de funciones de cadena en PHP.net y enreda con las posibilidades que tienes. Debes usar necesariamente las que aparecen a continuación.
+
+<?php
+    //chr: Devuelve una cadena de un caracter que contiene el carácter especificado por ascii
+	$str = chr(45);
+    
+    
+    htmlentities
+	?>
+	
+	<?php
+	//html_entity_decode:convierte todas las entidades HTML del string a sus caracteres correspondientes.
+    //htmlentities: todos los caracteres que tienen su equivalente HTML son convertidos a estas entidades
+	
+$orig = "I'll \"walk\" the <b>dog</b> now";
+
+$a = htmlentities($orig);
+
+$b = html_entity_decode($a);
+
+echo $a; // I'll &quot;walk&quot; the &lt;b&gt;dog&lt;/b&gt; now
+
+echo $b; // I'll "walk" the <b>dog</b> now
+?>
+	
+	
+    
+	<?php
+	
+	//htmlspecialchars_decode: Convierte entidades HTML especiales de nuevo en los caracteres
+$str = "<p>this -&gt; &quot;</p>\n";
+
+echo htmlspecialchars_decode($str);
+
+// note that here the quotes aren't converted
+echo htmlspecialchars_decode($str, ENT_NOQUOTES);
+?>
+
+    
+	<?php
+	/*htmlspecialchars: Ciertos caracteres tienen un significado especial en HTML 
+	y deben ser representados por entidades HTML si se desea preservar su significado. 
+	Esta función devuelve un string con estas conversiones realizadas.*/
+	
+$nuevo = htmlspecialchars("<a href='test'>Test</a>", ENT_QUOTES);
+echo $nuevo; // &lt;a href=&#039;test&#039;&gt;Test&lt;/a&gt;
+?>
+
+    
+    
+    rtrim/ltrim/trim
+	
+	<?php
+	
+	//rtrim: Esta función devuelve un string con los espacios en blanco retirados del final de str.
+
+$text = "\t\tThese are a few words :) ...  ";
+$binary = "\x09Example string\x0A";
+$hello  = "Hello World";
+var_dump($text, $binary, $hello);
+
+print "\n";
+
+$trimmed = rtrim($text);
+var_dump($trimmed);
+
+$trimmed = rtrim($text, " \t.");
+var_dump($trimmed);
+
+$trimmed = rtrim($hello, "Hdle");
+var_dump($trimmed);
+
+// retira los caracteres ASCII de control al inicio de $binary
+(de 0 a 31 inclusive)*/
+$clean = rtrim($binary, "\x00..\x1F");
+var_dump($clean);
+
+?>
+<?php
+//ltrim: Retira espacios en blanco (u otros caracteres) del inicio de un string.
+$text = "\t\tThese are a few words :) ...  ";
+$binary = "\x09Example string\x0A";
+$hello  = "Hello World";
+var_dump($text, $binary, $hello);
+
+print "\n";
+
+
+$trimmed = ltrim($text);
+var_dump($trimmed);
+
+$trimmed = ltrim($text, " \t.");
+var_dump($trimmed);
+
+$trimmed = ltrim($hello, "Hdle");
+var_dump($trimmed);
+
+// retira los caracteres ASCII de control al inicio de $binary
+// (de 0 a 31 inclusive)
+$clean = ltrim($binary, "\x00..\x1F");
+var_dump($clean);
+
+?>
+
+<?php
+//trim: Esta función devuelve una cadena con los espacios en blanco eliminados del inicio y final del str. 
+$text   = "\t\tThese are a few words :) ...  ";
+$binary = "\x09Example string\x0A";
+$hello  = "Hello World";
+var_dump($text, $binary, $hello);
+
+print "\n";
+
+$trimmed = trim($text);
+var_dump($trimmed);
+
+$trimmed = trim($text, " \t.");
+var_dump($trimmed);
+
+$trimmed = trim($hello, "Hdle");
+var_dump($trimmed);
+
+$trimmed = trim($hello, 'HdWr');
+var_dump($trimmed);
+
+// Elimina los caracteres de control ASCII al inicio y final de $binary
+// (from 0 to 31 inclusive)
+$clean = trim($binary, "\x00..\x1F");
+var_dump($clean);
+
+?>
+<?php
+/*str_pad:Esta función devuelve el string input rellenado por la izquierda, la derecha, 
+o en ambos lados hasta la longitud especificada */
+
+$input = "Alien";
+echo str_pad($input, 10);                      // produce "Alien     "
+echo str_pad($input, 10, "-=", STR_PAD_LEFT);  // produce "-=-=-Alien"
+echo str_pad($input, 10, "_", STR_PAD_BOTH);   // produce "__Alien___"
+echo str_pad($input,  6, "___");               // produces "Alien_"
+echo str_pad($input,  3, "*");                 // produces "Alien"
+?>
+
+	
+ <?php
+ 
+ //lcfirst: Devuelve un string con el primer caracter de str en minúscula si ese caracter es alfabético.
+$foo = 'HelloWorld';
+$foo = lcfirst($foo);             // helloWorld
+
+$bar = 'HELLO WORLD!';
+$bar = lcfirst($bar);             // hELLO WORLD!
+$bar = lcfirst(strtoupper($bar)); // hELLO WORLD!
+?>   
+	
+	
+    
+    
+    
+    
+	
+	<?php
+//number_format
+$número = 1234.56;
+
+// notación inglesa (por defecto)
+$número_formato_inglés = number_format($número);
+// 1,235
+
+// notación francesa
+$nombre_format_francais = number_format($número, 2, ',', ' ');
+// 1 234,56
+
+$número = 1234.5678;
+
+// notación inglesa sin separador de millares
+$english_format_number = number_format($número, 2, '.', '');
+// 1234.57
+
+?>
+
+
+    ord
+	<?php
+	//Devuelve el valor ASCII del primer carácter de la string.
+	
+	$str = "\n";
+	if (ord($str) == 10) {
+		echo "El primer caracter de \$str es un salto de linea.\n";
+	}
+
+    ?>
+	
+	<?php
+	//str_ireplace: 
+	
+	$bodytag = str_ireplace("%body%", "black", "<body text=%BODY%>");
+	echo $bodytag; // <body text=black>
+	
+	?>
+	<?php
+	//str_repeat:Devuelve el input repetido multiplier veces.
+	?>
+    
+	<?php
+	//str_repeat:Devuelve el input repetido multiplier veces.
+	?>
+    str_replace
+	<?php
+	//str_replace:Esta función devuelve un string o un array con todas las apariciones de search en subject reemplazadas con el valor dado de replace.
+	// Produce: <body text='black'>
+$bodytag = str_replace("%body%", "black", "<body text='%body%'>");
+
+// Produce: Hll Wrld f PHP
+$vowels = array("a", "e", "i", "o", "u", "A", "E", "I", "O", "U");
+$onlyconsonants = str_replace($vowels, "", "Hello World of PHP");
+
+// Produce: You should eat pizza, beer, and ice cream every day
+$phrase  = "You should eat fruits, vegetables, and fiber every day.";
+$healthy = array("fruits", "vegetables", "fiber");
+$yummy   = array("pizza", "beer", "ice cream");
+
+$newphrase = str_replace($healthy, $yummy, $phrase);
+
+// Produce: 2
+$str = str_replace("ll", "", "good golly miss molly!", $count);
+echo $count;
+	?>
+    str_rot13
+	<?php
+	//str_rot13:La codificación ROT13 simplemente desplaza cada letra en 13 posiciones en el alfabeto, mientras que deja todos los caracteres no-alfabéticos intactos
+	echo str_rot13('PHP 4.3.0'); // CUC 4.3.0
+
+	?>
+    str_shuffle
+	<?php
+	//str_shuffle:str_shuffle() baraja una cadena. Es creada una permutación de todas las posibles.
+	$cadena = 'abcdef';
+	$desordenada = str_shuffle($cadena);
+
+	// Esto imprime algo como: bfdaec
+	echo $desordenada;
+
+	?>
+    str_split
+	<?php
+	//str_split:Convierte un string en un array.
+	$str = "Hello Friend";
+
+	$arr1 = str_split($str);
+	$arr2 = str_split($str, 3);
+
+	print_r($arr1);
+	print_r($arr2);
+
+	?>
+    str_word_count
+	<?php
+	//str_word_count:Cuenta el número de palabras dentro de string. Si no se especifica el format opcional, entonces el valor devuelto será un integer representando el número de palabras encontradas.
+	$str = "Hello fri3nd, you're
+       looking          good today!";
+
+	print_r(str_word_count($str, 1));
+	print_r(str_word_count($str, 2));
+	print_r(str_word_count($str, 1, 'àáãç3'));
+
+	echo str_word_count($str);
+	?>
+    strcasecmp
+	<?php
+	//strcasecmp:Comparación de string segura a nivel binario e insensible a mayúsculas y minúsculas.
+	$var1 = "Hello";
+	$var2 = "hello";
+	if (strcasecmp($var1, $var2) == 0) {
+		echo '$var1 is equal to $var2 in a case-insensitive string comparison';
+	}
+	?>
+    strchr
+	<?php
+	//strchr:Devuelve el input repetido multiplier veces.
+	
+	?>
+    strcmp
+	<?php
+	//strcmp:Tenga en cuenta que esta comparación considera mayúsculas y minúsculas.
+	$var1 = "Hola";
+$var2 = "hola";
+if (strcmp($var1, $var2) !== 0) {
+    echo '$var1 no es igual a $var2 en una comparación que considera mayúsculas y minúsculas';
+}
+	?>
+    stripcslashes
+	<?php
+	//stripcslashes:Devuelve una cadena con las barras invertidas eliminadas Reconoce las marcas tipo C \n, \r ..., y la representación octal y hexadecimal.
+	stripcslashes('\n') == "\n"; //true;
+
+$str = "we are escaping \r\n"; //we are escaping
+	?>
+    stripos
+	<?php
+	//stripos:Encuentra la posición numérica de la primera aparición de needle (aguja) en el string haystack (pajar).
+	$findme    = 'a';
+$mystring1 = 'xyz';
+$mystring2 = 'ABC';
+
+$pos1 = stripos($mystring1, $findme);
+$pos2 = stripos($mystring2, $findme);
+
+// No, 'a' sin duda no está en 'xyz'
+if ($pos1 === false) {
+    echo "El string '$findme' no se encontró en el strng '$mystring1'";
+}
+
+// Observe el uso de ===.  Usar solamente == no funcionará como se espera
+// debido a que la posición de 'a' es el 0º (primer) caracter.
+if ($pos2 !== false) {
+    echo "Se encontró '$findme' en '$mystring2' en la posición $pos2";
+}
+	?>
+    stripslashes
+	<?php
+	//stripslashes:Quita las barras de un string con comillas escapadas.
+	$str = "Is your name O\'reilly?";
+
+// Salida: Is your name O'reilly?
+echo stripslashes($str);
+
+	?>
+    stristr
+	<?php
+	//stristr:Devuelve todo de haystack iniciando desde e incluyendo la primera aparición de needle hasta el final.
+	  $email = 'USER@EXAMPLE.com';
+  echo stristr($email, 'e'); // salida ER@EXAMPLE.com
+  echo stristr($email, 'e', true); // A partir de PHP 5.3.0, salida US
+	?>
+    strlen
+	<?php
+	//strlen:Devuelve la longitud del string dado.
+$str = 'abcdef';
+echo strlen($str); // 6
+
+$str = ' ab cd ';
+echo strlen($str); // 7
+
+	?>
+    strtolower
+	<?php
+	//strtolower:Devuelve una string con todos los caracteres alfabéticos convertidos a minúsculas.
+	$str = "Mary Had A Little Lamb and She LOVED It So";
+$str = strtolower($str);
+echo $str; // Prints mary had a little lamb and she loved it so
+	?>
+    strtoupper
+	<?php
+	//strtoupper:Devuelve el string con todos los caracteres alfabéticos convertidos a mayúsculas.
+	$str = "Mary Had A Little Lamb and She LOVED It So";
+$str = strtoupper($str);
+echo $str; // muestra: MARY HAD A LITTLE LAMB AND SHE LOVED IT SO
+
+	?>
+    strncasecmp
+	<?php
+	//strncasecmp:Devuelve el input repetido multiplier veces.
+	/*Esta función es similar a strcasecmp(), con la diferencia de que puede especificar el (límite superior de) número de caracteres de cada cadena a ser usado en la comparación.*/
+	
+	?>
+    strncmp
+	<?php
+	//strncmp:Esta función es similar a strcmp(), con la diferencia de que se puede especificar el (limite superior del) número de caracteres desde cada string a ser usado en la comparación.
+	?>
+    ucfirst
+	<?php
+	//ucfirst:Devuelve una cadena con el primer caracter str en máyusculas, si el caracter es alfabético.
+	?>
+    ucwords
+	<?php
+	//ucwords:Devuelve una cadena con la primera letra de cada palabra de str convertida a mayúsculas, si el caracter es alfanumérico.
+	$foo = 'hello world!';
+$foo = ucwords($foo);             // Hello World!
+
+$bar = 'HELLO WORLD!';
+$bar = ucwords($bar);             // HELLO WORLD!
+$bar = ucwords(strtolower($bar)); // Hello World!
+	?>
+
+--&gt;</span><span class="sc0">
+</span><span class="sc1">&lt;html&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;head&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;title&gt;&lt;/title&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;meta</span><span class="sc8"> </span><span class="sc3">http-equiv</span><span class="sc8">=</span><span class="sc6">"Content-Type"</span><span class="sc8"> </span><span class="sc3">content</span><span class="sc8">=</span><span class="sc6">"text/html; charset=utf-8"</span><span class="sc1">&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;meta</span><span class="sc8"> </span><span class="sc3">name</span><span class="sc8">=</span><span class="sc6">"viewport"</span><span class="sc8"> </span><span class="sc3">content</span><span class="sc8">=</span><span class="sc6">"width=device-width, initial-scale=1.0"</span><span class="sc1">&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;/head&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;body&gt;</span><span class="sc0">
+    </span><span class="sc18">&lt;?php</span><span class="sc118">
+    </span><span class="sc121">ini_set</span><span class="sc127">(</span><span class="sc120">'display_errors'</span><span class="sc127">,</span><span class="sc120">'On'</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc121">error_reporting</span><span class="sc127">(</span><span class="sc121">E_ALL</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc18">?&gt;</span><span class="sc0">
+    </span><span class="sc18">&lt;?php</span><span class="sc118">
+    </span><span class="sc124">/*
+    Probando strtoupper
+    strtoupper("Hola"):"HOLA"
+    */</span><span class="sc118">
+    </span><span class="sc123">$palabra</span><span class="sc127">=</span><span class="sc119">"Hola"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc121">print</span><span class="sc118"> </span><span class="sc119">"&lt;p&gt;strtoupper(\"</span><span class="sc126">$palabra</span><span class="sc119">\"): \""</span><span class="sc127">.</span><span class="sc121">strtoupper</span><span class="sc127">(</span><span class="sc123">$palabra</span><span class="sc127">).</span><span class="sc119">"\"&lt;/p&gt;\n"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc123">$palabra</span><span class="sc127">=</span><span class="sc119">"Hola buenas: ¿cómo estás?"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc121">print</span><span class="sc118"> </span><span class="sc119">"&lt;p&gt;strtoupper(\"</span><span class="sc126">$palabra</span><span class="sc119">\"): \""</span><span class="sc127">.</span><span class="sc121">strtoupper</span><span class="sc127">(</span><span class="sc123">$palabra</span><span class="sc127">).</span><span class="sc119">"\"&lt;/p&gt;\n"</span><span class="sc127">;</span><span class="sc118">
+    </span><span class="sc18">?&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;/body&gt;</span><span class="sc0">
+</span><span class="sc1">&lt;/html&gt;</span></div></body>
+</html>

@@ -1,0 +1,30 @@
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    clear: both;
+    width: 100%;
+    background-color: darkgray;
+}
+
+.sociales {
+    float: left;
+    margin-top: 6%;
+    margin-left: 4%;
+}
+
+img {
+    background-image: black;
+}
+
+.direccion {
+    text-align: right;
+    float: right;
+    margin-top: 5%;
+    margin-right: 10%;
+}
+
+p {
+    float: center;
+    margin: 2px;
+}

@@ -1,0 +1,48 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>06_enviar_datos</title>
+    <!-- Escribe un formulario que envíe los siguiente campos:
+Campos input de texto de los tipos que quieras
+Dropdown list (menú desplegable). Quiero 2, uno que mande el dato que se ve y otro que mande un código.
+Botones de radio (estaría bien que no fuera el sexo)
+Checkbox individual (por ejemplo, que esté marcado or defecto: mándenme correo basura)
+Checkboxes para seleccionar varios (marca las pelis que hayas visto)
+Un dropdown que permita seleccionar varios.
+Un campo oculto
+Uno que use optgroup
+-->
+</head>
+
+<body>
+    <form action="06_recibir_datos.php" method="POST">
+        <label for="nombre">nombre: <input type="text" name="nombre" id="nombre"></label>
+        <label for="contrasena">contraseña: <input type="password" name="contrasena" id="contrasena"></label>
+        <select name="colores">
+          <option>Rojo</option>
+          <option selected >Azúl</option>
+          <option>Verde</option>
+          <option>Amarillo</option>
+        </select>
+        </br>
+        <select name="comida[]" multiple>
+          <option value="hamburguesa">Hamburguesa</option>
+          <option value="arepa">Arepa</option>
+          <option value="pepito">Verde</option>
+          <option value="carne">carne</option>
+        </select>
+        </br>
+        ¿Seguro médico?<br>
+        <input id="publico" type="radio" name="seguro" value="publico" checked> <label for="publico">Público</label><br>
+        <input id="privado" type="radio" name="seguro" value="privado"> <label for="privado">Privado</label><br>
+        <input id="otros" type="radio" name="seguro" value="otros"><label for="otros">Otros</label><br>
+        <input id="checkbox" type="checkbox" name="checkbox"><label for="checkbox">haz click aquí</label>
+        <input type="hidden" name="oculto" value="seleccionado">
+        <input type="submit" value="Enviar Consulta">
+    </form>
+</body>
+
+</html>

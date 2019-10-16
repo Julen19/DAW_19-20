@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Ej. 7</title>
+<script>
+//4.Notas
+
+var nota= [];
+var i,mayorn,menorn,suma=0,may7=0;
+
+for(i=0;i<5;i++){
+     nota[i]= parseInt(prompt("Introduce la Nota : "+ (i+1)));
+	 if (nota[i]>=7) may7++;
+	 suma=suma+nota[i];
+	
+}
+
+// Recorrido de un array, buscando la mayor y la menor nota.
+// Tambien podria haberse calculado la mayor y menor nota mientras se cargan las notas.
+
+mayorn=nota[0];
+menorn=nota[0];
+for(i=1;i<5;i++){
+     
+	 if (nota[i]>mayorn) mayorn=nota[i];
+	 if (nota[i]<menorn) menorn=nota[i];
+
+}
+
+//Salida de Resultados
+document.write('<p> Mayor Nota: '+mayorn+'</p>');
+document.write('<p> Menor Nota: '+menorn+'</p>');
+document.write('<p> Mayores que 7: '+may7+'</p>');
+document.write('<p> Menores que 7: '+ (5-may7)+'</p>');
+document.write('<p> Media: '+ (suma/5)+'</p>');
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

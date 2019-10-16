@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Ej. 11</title>
+<script>
+//11.- Dias del mes
+
+
+
+var meses =["Enero","febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+var mes;
+var mensaje="";
+
+//Petición del número.
+do{
+
+mes=parseInt(prompt("Introduce un número de mes(1..12)"));
+}while ((mes>12)||(mes<1));
+
+if (mes==2)
+      mensaje="Febrero puede tener 28 ó 29 dependiendo del año amiguete.";
+else
+  
+  if ((mes==1)||(mes==3)||(mes==5)||(mes==7)|| (mes==8)||(mes==10)||(mes==12))   
+    mensaje="El mes elegido tiene 31 dias.";  
+  else
+    mensaje="El mes elegido tiene 30 dias.";
+ 
+document.write('<p><h2> MES :'+ meses[mes-1]+'  <h2></p>');
+document.write('<p>'+ mensaje +'</p>');
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

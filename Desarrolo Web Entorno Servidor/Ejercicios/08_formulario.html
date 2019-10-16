@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <!-- <form action="08_recibir_desprotegido.php" method="GET">
+        Nombre: <input type="text" name="nombre">
+        <input type="submit">
+    </form> -->
+    <form action="08_proteger_html.php" method="GET">
+        Nombre: <input type="text" name="nombre">
+        <input type="submit">
+    </form>
+	<!--
+	Vamos a ir enviando datos maliciosos a un servidor.
+	
+	Nos podr�an enviar un campo que ulilice marcas para desmaquetarnos la p�gina o similar.
+	Una tonter�a como </div> en el texto de un post nos puede destrozar la maquetaci�n de una p�gina.
+	
+	Escribe <big><big style="color:red">pepeá</big></big>
+	
+	Escribe Pepe <script>alert('Tonto el que lo lea')</script>
+    Escribe Pepe <script>alert('Tonto el que lo lea')</script>Luis
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.12.0/d3.min.js"></script>
+	-->
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Mayor de los tres</title>
+<script>
+//Solicita por pantalla tres números y comprueba cuál de ellos es el mayor
+
+
+var x= parseInt(prompt("Introduce el primer número"));
+var y= parseInt(prompt("Introduce el segundo número"));
+var z= parseInt(prompt("Introduce el tercer número"));
+var max;
+
+
+if ((x>y)&& (x>z)) 
+	     max=x;
+else
+     if(y>z)
+         max=y;
+     else
+         max=z;
+		 
+document.write('<p>El mayor de los tres números es: '+max+ '</p>');
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Ejercicio 5</title>
+<script>
+//Muestra el sumatorio de cada valor entre 1 y 100. 
+//En cada fila deben aparecer 10 números.
+// Con Bucle while
+var i,j;
+var sum;
+
+i=1;
+while(i<=100){
+  sum=0;
+  j=1;
+  while(j<=i){
+    sum=sum+j;
+	j++;
+    
+  }
+  document.write(sum + ' ');
+  if (i%10==0)
+   document.write('<br>');
+  i++;
+}
+</script>
+</head>
+<body>
+
+</body>
+</html>

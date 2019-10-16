@@ -1,0 +1,29 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Ejercicio 4</title>
+<script>
+//Muestra el sumatorio de cada valor entre 1 y 100. 
+//En cada fila deben aparecer 10 números.
+
+var i,j;
+var sum;
+
+
+for(i=1;i<=100;i++){
+  sum=0;
+  for (j=1;j<=i;j++){
+    sum=sum+j;
+    
+  }
+  document.write(sum + ' ');
+  if (i%10==0)
+   document.write('<br>');
+}
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+body {
+    text-align: center;
+}
+
+#principal {
+    display: block;
+    width: 500px;
+    margin: 50px auto;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #999999;
+    background: #DDDD;
+    border-radius: 20px;
+}
+
+#titulo {
+    font: bold 36px verdana, sans-serif;
+}
+
+#Jibiri {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#David {
+    border: 1px solid #999999;
+    padding: 15px;
+    width: 100px;
+    color: aqua;
+    border-radius: 0 0 50px 0;
+    background: black;
+}
+
+#Ignacio {
+    border: 1px solid #999999;
+    padding: 15px;
+    width: 100px;
+    color: aqua;
+    border-radius: 0 0 20px 0;
+    background: black;
+}
+
+#Hector {
+    border: 1px solid #999999;
+    padding: 15px;
+    width: 100px;
+    color: aqua;
+    border-radius: 0 0 10px 0;
+    background: black;
+}
+
+#Raul {
+    border: 1px solid #999999;
+    padding: 15px;
+    width: 100px;
+    color: aqua;
+    border-radius: 10px 40px 10px 40px;
+    background: black;
+}
+
+#Andreu {
+    border: 1px solid #999999;
+    padding: 15px;
+    width: 100px;
+    color: aqua;
+    border-radius: 10px 10px 10px 10px;
+    background: black;
+}
+
+#Berto {
+    border: 1px solid #999999;
+    padding: 10px;
+    width: 30px;
+    color: aqua;
+    text-align: center;
+    background: black;
+    border-radius: 40px 40px 40px 40px;
+}

@@ -1,0 +1,36 @@
+body {
+    background-color: rgb(238, 206, 164);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: rgb(168, 165, 165);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2 {
+    position: absolute;
+    transform: translate(10px, -50px);
+    height: 30px;
+    width: 140px;
+    padding-left: 10px;
+    background-color: rgb(218, 184, 123);
+    color: rgb(238, 230, 230);
+}
+
+div {
+    border: dashed 3px rgb(219, 174, 90);
+    background-color: rgb(241, 214, 163);
+    text-align: justify;
+    margin: 15px;
+    padding: 10px;
+    height: 200px;
+    width: 170px;
+    float: left;
+}
+
+p::first-letter {
+    font-size: 50px;
+    color: rgb(219, 174, 90);
+}

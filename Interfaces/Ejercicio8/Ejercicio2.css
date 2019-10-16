@@ -1,0 +1,14 @@
+.bloque {
+    padding: 20px;
+    width: 10%;
+    margin: 15px 20px;
+    float: left;
+}
+
+h4 {
+    background-color: rgb(180, 175, 175);
+}
+
+p {
+    border-style: groove;
+}

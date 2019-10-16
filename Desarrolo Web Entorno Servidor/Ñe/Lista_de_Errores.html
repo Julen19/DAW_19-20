@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/strict.dtd">
+<html>
+<head>
+<META http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Exported from Notepad++</title>
+<style type="text/css">
+span {
+	font-family: 'Courier New';
+	font-size: 10pt;
+	color: #000000;
+}
+.sc0 {
+	font-weight: bold;
+}
+.sc1 {
+	color: #0000FF;
+}
+.sc3 {
+	color: #FF0000;
+}
+.sc6 {
+	font-weight: bold;
+	color: #8000FF;
+}
+.sc8 {
+}
+.sc9 {
+	color: #008000;
+}
+.sc18 {
+	color: #FF0000;
+	background: #FDF8E3;
+}
+.sc21 {
+	background: #A6CAF0;
+}
+.sc26 {
+}
+.sc118 {
+	background: #FEFCF5;
+}
+.sc119 {
+	color: #808080;
+	background: #FEFCF5;
+}
+.sc120 {
+	color: #808080;
+	background: #FEFCF5;
+}
+.sc121 {
+	font-weight: bold;
+	color: #0000FF;
+	background: #FEFCF5;
+}
+.sc122 {
+	color: #FF8000;
+	background: #FEFCF5;
+}
+.sc123 {
+	color: #000080;
+	background: #FEFCF5;
+}
+.sc124 {
+	color: #008000;
+	background: #FEFCF5;
+}
+.sc127 {
+	color: #8000FF;
+	background: #FEFCF5;
+}
+</style>
+</head>
+<body>
+<div style="float: left; white-space: pre; line-height: 1; background: #FFFFFF; "><span class="sc21">&lt;!</span><span class="sc26">DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd"</span><span class="sc21">&gt;</span><span class="sc0">
+</span><span class="sc9">&lt;!--
+Escribe las constantes asociadas a los errores como binario de 32 cifras
+E_ERROR 
+E_WARNING 
+E_PARSE 
+E_NOTICE 
+E_CORE_ERROR 
+E_CORE_WARNING 
+E_COMPILE_ERROR 
+E_COMPILE_WARNING 
+E_USER_ERROR 
+E_USER_WARNING 
+E_USER_NOTICE 
+E_STRICT 
+E_RECOVERABLE_ERROR 
+E_DEPRECATED 
+E_USER_DEPRECATED 
+E_ALL 
+
+<?php
+
+// Desactivar toda notificación de error
+error_reporting(0);
+
+// Notificar solamente errores de ejecución
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
+
+// Notificar E_NOTICE también puede ser bueno (para informar de variables
+// no inicializadas o capturar errores en nombres de variables ...)
+error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
+
+// Notificar todos los errores excepto E_NOTICE
+error_reporting(E_ALL ^ E_NOTICE);
+
+// Notificar todos los errores de PHP (ver el registro de cambios)
+error_reporting(E_ALL);
+
+// Notificar todos los errores de PHP
+error_reporting(-1);
+
+// Lo mismo que error_reporting(E_ALL);
+ini_set('error_reporting', E_ALL);
+
+?>
+
+Busca la forma de detectar si alguno de los errores está activo
+--&gt;</span><span class="sc0">
+</span><span class="sc1">&lt;html&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;head&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;title&gt;&lt;/title&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;meta</span><span class="sc8"> </span><span class="sc3">http-equiv</span><span class="sc8">=</span><span class="sc6">"Content-Type"</span><span class="sc8"> </span><span class="sc3">content</span><span class="sc8">=</span><span class="sc6">"text/html; charset=utf-8"</span><span class="sc1">&gt;</span><span class="sc0">
+        </span><span class="sc1">&lt;meta</span><span class="sc8"> </span><span class="sc3">name</span><span class="sc8">=</span><span class="sc6">"viewport"</span><span class="sc8"> </span><span class="sc3">content</span><span class="sc8">=</span><span class="sc6">"width=device-width, initial-scale=1.0"</span><span class="sc1">&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;/head&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;body&gt;</span><span class="sc0">
+    </span><span class="sc18">&lt;?php</span><span class="sc118">
+    </span><span class="sc121">ini_set</span><span class="sc127">(</span><span class="sc120">'display_errors'</span><span class="sc127">,</span><span class="sc120">'On'</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc121">error_reporting</span><span class="sc127">(</span><span class="sc121">E_ALL</span><span class="sc127">);</span><span class="sc118">
+    </span><span class="sc18">?&gt;</span><span class="sc0">
+    </span><span class="sc18">&lt;?php</span><span class="sc118">
+</span><span class="sc121">print</span><span class="sc118"> </span><span class="sc119">"&lt;p&gt;"</span><span class="sc127">.</span><span class="sc121">str_pad</span><span class="sc127">(</span><span class="sc121">decbin</span><span class="sc127">(</span><span class="sc121">E_ERROR</span><span class="sc127">),</span><span class="sc122">32</span><span class="sc127">,</span><span class="sc120">'0'</span><span class="sc127">,</span><span class="sc121">STR_PAD_LEFT</span><span class="sc127">).</span><span class="sc119">" -&gt; E_ERROR &lt;/p&gt;"</span><span class="sc127">;</span><span class="sc118">
+
+</span><span class="sc121">print</span><span class="sc118"> </span><span class="sc119">"&lt;p&gt;"</span><span class="sc127">.</span><span class="sc121">str_pad</span><span class="sc127">(</span><span class="sc121">decbin</span><span class="sc127">(</span><span class="sc121">E_WARNING</span><span class="sc127">),</span><span class="sc122">32</span><span class="sc127">,</span><span class="sc120">'0'</span><span class="sc127">,</span><span class="sc121">STR_PAD_LEFT</span><span class="sc127">).</span><span class="sc119">" -&gt; E_WARNING &lt;/p&gt;"</span><span class="sc127">;</span><span class="sc118">
+
+</span><span class="sc121">print</span><span class="sc118"> </span><span class="sc119">"&lt;p&gt;"</span><span class="sc127">.</span><span class="sc121">str_pad</span><span class="sc127">(</span><span class="sc121">decbin</span><span class="sc127">(</span><span class="sc121">E_PARSE</span><span class="sc127">),</span><span class="sc122">32</span><span class="sc127">,</span><span class="sc120">'0'</span><span class="sc127">,</span><span class="sc121">STR_PAD_LEFT</span><span class="sc127">).</span><span class="sc119">" -&gt; E_PARSE &lt;/p&gt;"</span><span class="sc127">;</span><span class="sc118">
+
+</span><span class="sc121">print</span><span class="sc118"> </span><span class="sc119">"&lt;p&gt;"</span><span class="sc127">.</span><span class="sc121">str_pad</span><span class="sc127">(</span><span class="sc121">decbin</span><span class="sc127">(</span><span class="sc121">E_NOTICE</span><span class="sc127">),</span><span class="sc122">32</span><span class="sc127">,</span><span class="sc120">'0'</span><span class="sc127">,</span><span class="sc121">STR_PAD_LEFT</span><span class="sc127">).</span><span class="sc119">" -&gt; E_NOTICE &lt;/p&gt;
+"</span><span class="sc127">;</span><span class="sc118">
+</span><span class="sc121">print</span><span class="sc118"> </span><span class="sc119">"&lt;p&gt;"</span><span class="sc127">.</span><span class="sc121">str_pad</span><span class="sc127">(</span><span class="sc121">decbin</span><span class="sc127">(</span><span class="sc121">E_CORE_ERROR</span><span class="sc127">),</span><span class="sc122">32</span><span class="sc127">,</span><span class="sc120">'0'</span><span class="sc127">,</span><span class="sc121">STR_PAD_LEFT</span><span class="sc127">).</span><span class="sc119">" -&gt; E_CORE_ERROR &lt;/p&gt;
+"</span><span class="sc127">;</span><span class="sc118">
+</span><span class="sc121">print</span><span class="sc118"> </span><span class="sc119">"&lt;p&gt;"</span><span class="sc127">.</span><span class="sc121">str_pad</span><span class="sc127">(</span><span class="sc121">decbin</span><span class="sc127">(</span><span class="sc121">E_CORE_WARNING</span><span class="sc127">),</span><span class="sc122">32</span><span class="sc127">,</span><span class="sc120">'0'</span><span class="sc127">,</span><span class="sc121">STR_PAD_LEFT</span><span class="sc127">).</span><span class="sc119">" -&gt; E_CORE_WARNING &lt;/p&gt;"</span><span class="sc127">;</span><span class="sc118">
+</span><span class="sc121">print</span><span class="sc118"> </span><span class="sc119">"&lt;p&gt;"</span><span class="sc127">.</span><span class="sc121">str_pad</span><span class="sc127">(</span><span class="sc121">decbin</span><span class="sc127">(</span><span class="sc121">E_COMPILE_ERROR</span><span class="sc127">),</span><span class="sc122">32</span><span class="sc127">,</span><span class="sc120">'0'</span><span class="sc127">,</span><span class="sc121">STR_PAD_LEFT</span><span class="sc127">).</span><span class="sc119">" -&gt; E_COMPILE_ERROR &lt;/p&gt;"</span><span class="sc127">;</span><span class="sc118">
+
+</span><span class="sc121">print</span><span class="sc118"> </span><span class="sc119">"&lt;p&gt;"</span><span class="sc127">.</span><span class="sc121">str_pad</span><span class="sc127">(</span><span class="sc121">decbin</span><span class="sc127">(</span><span class="sc121">E_COMPILE_WARNING</span><span class="sc127">),</span><span class="sc122">32</span><span class="sc127">,</span><span class="sc120">'0'</span><span class="sc127">,</span><span class="sc121">STR_PAD_LEFT</span><span class="sc127">).</span><span class="sc119">" -&gt; E_COMPILE_WARNING &lt;/p&gt;"</span><span class="sc127">;</span><span class="sc118">
+
+</span><span class="sc121">print</span><span class="sc118"> </span><span class="sc119">"&lt;p&gt;"</span><span class="sc127">.</span><span class="sc121">str_pad</span><span class="sc127">(</span><span class="sc121">decbin</span><span class="sc127">(</span><span class="sc121">E_USER_ERROR</span><span class="sc127">),</span><span class="sc122">32</span><span class="sc127">,</span><span class="sc120">'0'</span><span class="sc127">,</span><span class="sc121">STR_PAD_LEFT</span><span class="sc127">).</span><span class="sc119">" -&gt; E_USER_ERROR &lt;/p&gt;"</span><span class="sc127">;</span><span class="sc118">
+
+</span><span class="sc121">print</span><span class="sc118"> </span><span class="sc119">"&lt;p&gt;"</span><span class="sc127">.</span><span class="sc121">str_pad</span><span class="sc127">(</span><span class="sc121">decbin</span><span class="sc127">(</span><span class="sc121">E_USER_WARNING</span><span class="sc127">),</span><span class="sc122">32</span><span class="sc127">,</span><span class="sc120">'0'</span><span class="sc127">,</span><span class="sc121">STR_PAD_LEFT</span><span class="sc127">).</span><span class="sc119">" -&gt; E_USER_WARNING &lt;/p&gt;"</span><span class="sc127">;</span><span class="sc118">
+
+</span><span class="sc121">print</span><span class="sc118"> </span><span class="sc119">"&lt;p&gt;"</span><span class="sc127">.</span><span class="sc121">str_pad</span><span class="sc127">(</span><span class="sc121">decbin</span><span class="sc127">(</span><span class="sc121">E_USER_NOTICE</span><span class="sc127">),</span><span class="sc122">32</span><span class="sc127">,</span><span class="sc120">'0'</span><span class="sc127">,</span><span class="sc121">STR_PAD_LEFT</span><span class="sc127">).</span><span class="sc119">" -&gt; E_USER_NOTICE &lt;/p&gt;"</span><span class="sc127">;</span><span class="sc118">
+
+</span><span class="sc121">print</span><span class="sc118"> </span><span class="sc119">"&lt;p&gt;"</span><span class="sc127">.</span><span class="sc121">str_pad</span><span class="sc127">(</span><span class="sc121">decbin</span><span class="sc127">(</span><span class="sc121">E_STRICT</span><span class="sc127">),</span><span class="sc122">32</span><span class="sc127">,</span><span class="sc120">'0'</span><span class="sc127">,</span><span class="sc121">STR_PAD_LEFT</span><span class="sc127">).</span><span class="sc119">" -&gt; E_STRICT &lt;/p&gt;"</span><span class="sc127">;</span><span class="sc118">
+</span><span class="sc121">print</span><span class="sc118"> </span><span class="sc119">"&lt;p&gt;"</span><span class="sc127">.</span><span class="sc121">str_pad</span><span class="sc127">(</span><span class="sc121">decbin</span><span class="sc127">(</span><span class="sc121">E_RECOVERABLE_ERROR</span><span class="sc127">),</span><span class="sc122">32</span><span class="sc127">,</span><span class="sc120">'0'</span><span class="sc127">,</span><span class="sc121">STR_PAD_LEFT</span><span class="sc127">).</span><span class="sc119">" -&gt; E_RECOVERABLE_ERROR &lt;/p&gt;"</span><span class="sc127">;</span><span class="sc118">
+</span><span class="sc121">print</span><span class="sc118"> </span><span class="sc119">"&lt;p&gt;"</span><span class="sc127">.</span><span class="sc121">str_pad</span><span class="sc127">(</span><span class="sc121">decbin</span><span class="sc127">(</span><span class="sc121">E_DEPRECATED</span><span class="sc127">),</span><span class="sc122">32</span><span class="sc127">,</span><span class="sc120">'0'</span><span class="sc127">,</span><span class="sc121">STR_PAD_LEFT</span><span class="sc127">).</span><span class="sc119">" -&gt; E_DEPRECATED &lt;/p&gt;"</span><span class="sc127">;</span><span class="sc118">
+</span><span class="sc121">print</span><span class="sc118"> </span><span class="sc119">"&lt;p&gt;"</span><span class="sc127">.</span><span class="sc121">str_pad</span><span class="sc127">(</span><span class="sc121">decbin</span><span class="sc127">(</span><span class="sc121">E_USER_DEPRECATED</span><span class="sc127">),</span><span class="sc122">32</span><span class="sc127">,</span><span class="sc120">'0'</span><span class="sc127">,</span><span class="sc121">STR_PAD_LEFT</span><span class="sc127">).</span><span class="sc119">" -&gt; E_USER_DEPRECATED &lt;/p&gt;"</span><span class="sc127">;</span><span class="sc118">
+</span><span class="sc121">print</span><span class="sc118"> </span><span class="sc119">"&lt;p&gt;"</span><span class="sc127">.</span><span class="sc121">str_pad</span><span class="sc127">(</span><span class="sc121">decbin</span><span class="sc127">(</span><span class="sc121">E_ALL</span><span class="sc127">),</span><span class="sc122">32</span><span class="sc127">,</span><span class="sc120">'0'</span><span class="sc127">,</span><span class="sc121">STR_PAD_LEFT</span><span class="sc127">).</span><span class="sc119">" -&gt; E_ALL &lt;/p&gt;"</span><span class="sc127">;</span><span class="sc118">
+</span><span class="sc121">error_reporting</span><span class="sc127">(</span><span class="sc121">E_ALL</span><span class="sc118"> </span><span class="sc127">&amp;</span><span class="sc118"> </span><span class="sc127">~</span><span class="sc121">E_NOTICE</span><span class="sc127">);</span><span class="sc118">
+</span><span class="sc123">$actual</span><span class="sc127">=</span><span class="sc121">error_reporting</span><span class="sc127">();</span><span class="sc118">  
+</span><span class="sc121">print</span><span class="sc118"> </span><span class="sc119">"&lt;p&gt;"</span><span class="sc127">.</span><span class="sc121">str_pad</span><span class="sc127">(</span><span class="sc121">decbin</span><span class="sc127">(</span><span class="sc123">$actual</span><span class="sc127">),</span><span class="sc122">32</span><span class="sc127">,</span><span class="sc120">'0'</span><span class="sc127">,</span><span class="sc121">STR_PAD_LEFT</span><span class="sc127">).</span><span class="sc119">" -&gt; error activo &lt;/p&gt;"</span><span class="sc127">;</span><span class="sc118">
+</span><span class="sc121">print</span><span class="sc118"> </span><span class="sc121">error_reporting</span><span class="sc127">();</span><span class="sc118">
+</span><span class="sc124">/*
+Vamos a ver si los últimos están activos
+*/</span><span class="sc118">
+</span><span class="sc121">if</span><span class="sc127">(</span><span class="sc118"> </span><span class="sc127">(</span><span class="sc123">$actual</span><span class="sc118"> </span><span class="sc127">&amp;</span><span class="sc118"> </span><span class="sc121">E_ERROR</span><span class="sc127">)!=</span><span class="sc122">0</span><span class="sc118"> </span><span class="sc127">){</span><span class="sc118">
+    </span><span class="sc121">print</span><span class="sc118"> </span><span class="sc119">"&lt;p&gt;E_ERROR Activo&lt;/p&gt;\n"</span><span class="sc127">;</span><span class="sc118">
+</span><span class="sc127">}</span><span class="sc118">
+</span><span class="sc121">if</span><span class="sc127">(</span><span class="sc118"> </span><span class="sc123">$actual</span><span class="sc118"> </span><span class="sc127">&amp;</span><span class="sc118"> </span><span class="sc121">E_WARNING</span><span class="sc118"> </span><span class="sc127">){</span><span class="sc118">
+    </span><span class="sc121">print</span><span class="sc118"> </span><span class="sc119">"&lt;p&gt;E_WARNING Activo&lt;/p&gt;\n"</span><span class="sc127">;</span><span class="sc118">
+</span><span class="sc127">}</span><span class="sc118">
+
+</span><span class="sc18">?&gt;</span><span class="sc0">
+    </span><span class="sc1">&lt;/body&gt;</span><span class="sc0">
+</span><span class="sc1">&lt;/html&gt;</span><span class="sc0">
+</span></div></body>
+</html>

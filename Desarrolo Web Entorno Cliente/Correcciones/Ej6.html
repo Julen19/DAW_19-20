@@ -1,0 +1,30 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Ej 6</title>
+<script>
+//Pequeño traductor
+
+
+
+var opc= parseInt(prompt("Que palabras quieres traducir \n1.-Casa \n2.-Perro \n3.-Gato \n4.-Mesa \n\nOpcion(1..4):"));
+var mensaje="";
+switch (opc){
+   case 1: mensaje="CASA: HOUSE";break;
+   case 2: mensaje="PERRO: DOG";break;
+   case 3: mensaje="GATO: CAT";break;
+   case 4: mensaje="MESA: TABLE";break;
+   default: mensaje="OPCION INCORRECTA";
+}
+
+document.write('<p><h2>PEQUEÑO TRADUCTOR</h2></p>');
+document.write('<p>'+ mensaje +'</p>');
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
