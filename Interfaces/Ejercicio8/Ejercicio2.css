@@ -4,7 +4,8 @@ h1 {
 }
 
 h2 {
-    width: 100px padding: 20px;
+    width: 100px;
+    padding: 20px;
     background-color: grey;
     text-align: right;
 }
@@ -41,5 +42,5 @@ h4 {
 }
 
 p {
-    //border-style: groove;
+    /* border-style: groove; */
 }
