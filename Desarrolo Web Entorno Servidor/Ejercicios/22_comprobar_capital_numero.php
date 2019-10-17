@@ -12,7 +12,7 @@
     error_reporting(E_ALL);
     ?>
     <?php
-    require_once 'datos/paises_y_capitales.php'; 
+    require_once '22_paises_y_capitales_numero.php'; 
 
     // print "<pre>".print_r($_GET,true)."</pre>\n";
     if($_GET['pais']==$_GET['capital']){

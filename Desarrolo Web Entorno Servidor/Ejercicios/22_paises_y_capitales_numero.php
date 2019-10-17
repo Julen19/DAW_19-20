@@ -12,7 +12,7 @@ Hacemos el sorteo de país.
 El menor índice posible es 0
 El mayor count($capital)-1
 */
-require_once 'datos/paises_y_capitales.php'; 
+require_once 'Paises_Capitales.php'; 
 $rifa=rand(0,count($capital)-1);
 /*
 Sería posible comenzar en 1
